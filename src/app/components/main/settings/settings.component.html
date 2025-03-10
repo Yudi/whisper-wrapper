@@ -20,14 +20,24 @@
             <mat-option value="{{ fileFormat }}">{{ fileFormat }}</mat-option>
           }
         </mat-select>
-        <mat-label><mat-icon>description</mat-icon> <strong>&nbsp;Formato do arquivo</strong></mat-label>
+        <mat-label>
+          <mat-icon>description</mat-icon>
+          <strong
+            >&nbsp;{{
+              (settingsForm.get("outputFormat")?.value?.length ?? 0) > 1
+                ? "Formatos dos arquivos"
+                : "Formato do arquivo"
+            }}</strong
+          >
+        </mat-label>
       </mat-form-field>
     </div>
 
     <div>
       <mat-form-field class="w-100">
         <mat-select formControlName="aiModel">
-          <mat-option value="option">Option</mat-option>
+          <mat-option value="option">large-v2</mat-option>
+          <mat-option value="option">large-v3</mat-option>
         </mat-select>
         <mat-label><mat-icon>smart_toy</mat-icon> <strong>&nbsp;Modelo</strong></mat-label>
       </mat-form-field>

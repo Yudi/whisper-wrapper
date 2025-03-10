@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
-import { MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle } from "@angular/material/dialog";
+import { MatDialogActions, MatDialogClose, MatDialogContent } from "@angular/material/dialog";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatIconModule } from "@angular/material/icon";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
@@ -9,7 +9,6 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
   selector: "app-progress",
   imports: [
     MatDialogContent,
-    MatDialogTitle,
     MatDialogActions,
     MatButtonModule,
     MatDialogClose,

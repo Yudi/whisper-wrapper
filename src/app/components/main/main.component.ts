@@ -30,8 +30,8 @@ export class MainComponent {
   ];
 
   mainForm = new FormGroup({
-    inputFile: new FormControl({ value: "", disabled: true }),
-    outputFile: new FormControl({ value: "", disabled: true }),
+    inputFile: new FormControl({ value: "Arquivo.mp4", disabled: true }),
+    outputFile: new FormControl({ value: "Desktop", disabled: true }),
     parseLanguage: new FormControl("pt"),
   });
 }

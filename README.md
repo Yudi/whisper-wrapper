@@ -1,6 +1,6 @@
 # Whisper Wrapper
 
-Este projeto adiciona uma interface gráfica ao whisper.cpp e ao whisperX, programas de linha de comando que transcrevem arquivos de áudio em texto.
+Este projeto adiciona uma interface gráfica ao whisper.cpp-cli, um programa de linha de comando que transcreve arquivos de áudio em texto.
 
 ## Desenvolvimento
 

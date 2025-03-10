@@ -1,7 +1,19 @@
-# Tauri + Angular
+# Whisper Wrapper
 
-This template should help get you started developing with Tauri and Angular.
+Este projeto adiciona uma interface gráfica ao whisper.cpp e ao whisperX, programas de linha de comando que transcrevem arquivos de áudio em texto.
 
-## Recommended IDE Setup
+## Desenvolvimento
 
-[VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer) + [Angular Language Service](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template).
+Para iniciar o site localmente, primeiro instale o [Bun](https://bun.sh/).
+
+Depois, instale as dependências:
+
+```bash
+bun install
+```
+
+Em seguida, inicie o servidor de desenvolvimento:
+
+```bash
+bun run tauri dev
+```

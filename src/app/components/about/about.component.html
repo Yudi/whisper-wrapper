@@ -1,1 +1,10 @@
-<p>about works!</p>
+<h2 mat-dialog-title class="title">Whisper.cpp Wrapper</h2>
+
+<mat-dialog-content class="container">
+  <button mat-button (click)="openRepository()">Repositório</button>
+  <br />
+  <button mat-button (click)="openLicenses()">Licenças</button>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="" cdkFocusInitial>FECHAR</button>
+</mat-dialog-actions>

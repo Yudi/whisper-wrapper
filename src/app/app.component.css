@@ -1,17 +1,6 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color: #0f0f0f;
-  background-color: #f6f6f6;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  color: var(--mat-sys-on-surface);
+  background-color: var(--mat-sys-surface);
 }
 
 .container {
@@ -21,8 +10,31 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  flex: 1;
 }
 
 .toolbar-spacer {
   flex: 1 1 auto;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+main {
+  flex: 1;
+  overflow-y: auto; /* Allows scrolling only inside main */
+  padding: 0 1rem 1rem 1rem;
+}
+
+footer {
+  height: 64px;
+  flex-shrink: 0; /* Ensures footer doesn't shrink */
 }

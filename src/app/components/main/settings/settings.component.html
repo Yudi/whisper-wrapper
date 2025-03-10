@@ -1,25 +1,31 @@
-<section class="container">
+<h2 mat-dialog-title>Opções</h2>
+
+<mat-dialog-content class="container">
   <form [formGroup]="settingsForm">
+    <mat-form-field class="w-100">
+      <mat-select formControlName="appLanguage">
+        @for (language of appLanguages; track language) {
+          <mat-option value="{{ language.code }}">{{ language.name }}</mat-option>
+        }
+      </mat-select>
+      <mat-label><mat-icon>language</mat-icon> <strong>&nbsp;Idioma da interface</strong></mat-label>
+    </mat-form-field>
+
+    <mat-divider></mat-divider>
+    <br />
     <div>
-      <mat-form-field class="full-width">
-        <mat-select formControlName="outputFormat">
-          <mat-option value="option">Option</mat-option>
+      <mat-form-field class="w-100">
+        <mat-select formControlName="outputFormat" multiple>
+          @for (fileFormat of availableOutputFormats; track fileFormat) {
+            <mat-option value="{{ fileFormat }}">{{ fileFormat }}</mat-option>
+          }
         </mat-select>
         <mat-label><mat-icon>description</mat-icon> <strong>&nbsp;Formato do arquivo</strong></mat-label>
       </mat-form-field>
     </div>
 
     <div>
-      <mat-form-field class="full-width">
-        <mat-select formControlName="parseLanguage">
-          <mat-option value="option">Option</mat-option>
-        </mat-select>
-        <mat-label><mat-icon>language</mat-icon> <strong>&nbsp;Idioma</strong></mat-label>
-      </mat-form-field>
-    </div>
-
-    <div>
-      <mat-form-field class="full-width">
+      <mat-form-field class="w-100">
         <mat-select formControlName="aiModel">
           <mat-option value="option">Option</mat-option>
         </mat-select>
@@ -32,25 +38,29 @@
         <mat-expansion-panel-header>
           <mat-panel-title> Opções avançadas </mat-panel-title>
         </mat-expansion-panel-header>
-        <mat-form-field class="full-width">
-          <mat-label><strong>Working directory</strong></mat-label>
+        <mat-form-field class="w-100">
+          <mat-label><strong>Diretório de trabalho</strong></mat-label>
           <input matInput [disabled]="true" formControlName="workingDirectory" />
           <button mat-icon-button matSuffix>
-            <mat-icon>folder</mat-icon>
+            <mat-icon>folder_open</mat-icon>
           </button>
         </mat-form-field>
         <div style="align-items: left">
           <div style="display: flex; align-items: center; gap: 0.25rem">
             <mat-icon style="min-width: 24px">volume_up</mat-icon>
-            <mat-label><strong>Ganho</strong></mat-label>
-            <mat-slider min="0" max="10" step="1" class="full-width">
-              <input matSliderThumb value="0" formControlName="volumeGain" />
+            <mat-label><strong>Volume</strong></mat-label>
+            <mat-slider min="1" max="10" step="0.5" class="w-100">
+              <input matSliderThumb value="1" formControlName="volumeGain" />
             </mat-slider>
-            <span>+0.0</span>
+
+            <span> {{ (settingsForm.get("volumeGain")?.value ?? 1) * 100 | number: "1.0-0" }}% </span>
           </div>
-          <p style="text-align: left">Esta opção não é salva no fechamento</p>
+          <p class="label">Esta opção não é salva no fechamento</p>
         </div>
       </mat-expansion-panel>
     </mat-accordion>
   </form>
-</section>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="" cdkFocusInitial>OK</button>
+</mat-dialog-actions>

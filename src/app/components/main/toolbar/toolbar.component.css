@@ -1,0 +1,21 @@
+.custom-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.center-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.right-icons {
+  display: flex;
+  gap: 8px;
+}

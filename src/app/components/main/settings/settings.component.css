@@ -5,4 +5,16 @@
   gap: 16px;
   max-width: 400px; /* Adjust as needed */
   margin: auto;
+  scrollbar-width: thin;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  margin: 1rem 0 0 1rem;
+}
+
+.label {
+  text-align: left;
+  font-size: 0.75rem;
+  margin: 0;
 }

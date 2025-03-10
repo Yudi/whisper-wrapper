@@ -1,0 +1,78 @@
+<h2 mat-dialog-title>Processo iniciado</h2>
+
+<mat-dialog-content class="container">
+  <mat-accordion multi>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title style="text-wrap: nowrap">
+          <span class="progress-icon">
+            <mat-icon>check</mat-icon>
+          </span>
+          Conversão para áudio (FFmpeg)
+        </mat-panel-title>
+        <mat-panel-description> 100% </mat-panel-description>
+      </mat-expansion-panel-header>
+      <!-- prettier-ignore -->
+      <p class="console-output">    src/app/app.component.ts:11:26:
+        11 │   imports: [CommonModule, RouterOutlet, MainComponent, ToolbarComp...
+           ╵                           ~~~~~~~~~~~~
+  <br>
+  
+  Component update sent to client(s).  <br>
+  Initial chunk files | Names | Raw size  <br>
+  main.js             | main  | 31.46 kB |  <br>
+  <br>  <br>
+  Application bundle generation complete. [0.113 seconds]  <br>
+  <br>  <br>
+  ▲ [WARNING] TS-998113: RouterOutlet is not used within the template of AppComponent [plugin angular-compiler]  <br>
+  <br>  <br>
+  
+      src/app/app.component.ts:11:26:<br>
+        11 │   imports: [CommonModule, RouterOutlet, MainComponent, ToolbarComp...<br>
+           ╵                           ~~~~~~~~~~~~
+           <br><br>
+  
+  Component update sent to client(s).<br>
+  Initial chunk files | Names | Raw size<br>
+  main.js             | main  | 31.47 kB |
+  <br><br>  
+  Application bundle generation complete. [0.149 seconds]<br><br>
+  
+  ▲ [WARNING] TS-998113: RouterOutlet is not used within the template of AppComponent [plugin angular-compiler]
+  
+      src/app/app.component.ts:11:26:
+        11 │   imports: [CommonModule, RouterOutlet, MainComponent, ToolbarComp...
+           ╵                           ~~~~~~~~~~~~
+  
+  
+  Component update sent to client(s).
+  Initial chunk files | Names | Raw size
+  main.js             | main  | 31.50 kB |
+  
+  Application bundle generation complete. [0.165 seconds]
+  
+  ▲ [WARNING] TS-998113: RouterOutlet is not used within the template of AppComponent [plugin angular-compiler]
+  
+      src/app/app.component.ts:11:26:
+        11 │   imports: [CommonModule, RouterOutlet, MainComponent, ToolbarComp...
+           ╵                           ~~~~~~~~~~~~
+  
+  
+  Component update sent to client(s).</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title style="text-wrap: nowrap">
+          <div class="progress-icon">
+            <mat-progress-spinner [diameter]="24" mode="indeterminate" />
+          </div>
+          Transcrição do áudio (whisper.cpp)
+        </mat-panel-title>
+        <mat-panel-description> 75% </mat-panel-description>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+  </mat-accordion>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="" cdkFocusInitial>OK</button>
+</mat-dialog-actions>

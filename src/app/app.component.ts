@@ -7,11 +7,10 @@ import { MainComponent } from "./components/main/main.component";
 import { ToolbarComponent } from "./components/main/toolbar/toolbar.component";
 
 @Component({
-  selector: "app-root",
-  standalone: true,
-  imports: [CommonModule, RouterOutlet, MainComponent, ToolbarComponent],
-  templateUrl: "./app.component.html",
-  styleUrl: "./app.component.css",
+    selector: "app-root",
+    imports: [CommonModule, RouterOutlet, MainComponent, ToolbarComponent],
+    templateUrl: "./app.component.html",
+    styleUrl: "./app.component.css"
 })
 export class AppComponent {
   greetingMessage = "";

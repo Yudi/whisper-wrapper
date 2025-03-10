@@ -9,21 +9,20 @@ import { MatSliderModule } from "@angular/material/slider";
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @Component({
-  selector: "app-settings",
-  standalone: true,
-  imports: [
-    MatButtonModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatIconModule,
-    MatInputModule,
-    MatExpansionModule,
-    MatSliderModule,
-    FormsModule,
-    ReactiveFormsModule,
-  ],
-  templateUrl: "./settings.component.html",
-  styleUrl: "./settings.component.css",
+    selector: "app-settings",
+    imports: [
+        MatButtonModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatIconModule,
+        MatInputModule,
+        MatExpansionModule,
+        MatSliderModule,
+        FormsModule,
+        ReactiveFormsModule,
+    ],
+    templateUrl: "./settings.component.html",
+    styleUrl: "./settings.component.css"
 })
 export class SettingsComponent {
   settingsForm = new FormGroup({

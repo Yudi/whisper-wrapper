@@ -4,11 +4,10 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
 
 @Component({
-  selector: "app-main",
-  standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, MatFormFieldModule, MatIconModule],
-  templateUrl: "./main.component.html",
-  styleUrl: "./main.component.css",
+    selector: "app-main",
+    imports: [FormsModule, ReactiveFormsModule, MatFormFieldModule, MatIconModule],
+    templateUrl: "./main.component.html",
+    styleUrl: "./main.component.css"
 })
 export class MainComponent {
   mainForm = new FormGroup({

@@ -3,14 +3,13 @@ import { CommonModule } from "@angular/common";
 import { RouterOutlet } from "@angular/router";
 import { invoke } from "@tauri-apps/api/core";
 import { MainComponent } from "./components/main/main.component";
-import { MatToolbarModule } from "@angular/material/toolbar";
-import { MatIconModule } from "@angular/material/icon";
-import { MatButtonModule } from "@angular/material/button";
+
+import { ToolbarComponent } from "./components/main/toolbar/toolbar.component";
 
 @Component({
   selector: "app-root",
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MainComponent, MatToolbarModule, MatIconModule, MatButtonModule],
+  imports: [CommonModule, RouterOutlet, MainComponent, ToolbarComponent],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.css",
 })

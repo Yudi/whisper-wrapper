@@ -1,56 +1,20 @@
 <section class="container">
-  <div>
-    <mat-form-field class="full-width">
-      <mat-label><strong>Vídeo</strong></mat-label>
-      <input matInput disabled />
-      <button mat-icon-button matSuffix>
-        <mat-icon>search</mat-icon>
-      </button>
-    </mat-form-field>
-  </div>
+  <form [formGroup]="mainForm">
+    <div>
+      <mat-form-field class="full-width">
+        <mat-label><strong>Vídeo</strong></mat-label>
+        <input matInput formControlName="inputFile" [disabled]="true" />
+        <button mat-icon-button matSuffix>
+          <mat-icon>folder</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
 
-  <div>
-    <mat-form-field class="full-width">
-      <mat-label>Nome da transcrição</mat-label>
-      <input matInput />
-    </mat-form-field>
-  </div>
-
-  <div>
-    <mat-form-field class="full-width">
-      <mat-select>
-        <mat-option value="option">Option</mat-option>
-      </mat-select>
-      <mat-label><mat-icon>description</mat-icon> <strong>&nbsp;Formato do arquivo</strong></mat-label>
-    </mat-form-field>
-  </div>
-
-  <div>
-    <mat-form-field class="full-width">
-      <mat-select>
-        <mat-option value="option">Option</mat-option>
-      </mat-select>
-      <mat-label><mat-icon>language</mat-icon> <strong>&nbsp;Idioma</strong></mat-label>
-    </mat-form-field>
-  </div>
-
-  <div>
-    <mat-form-field class="full-width">
-      <mat-select>
-        <mat-option value="option">Option</mat-option>
-      </mat-select>
-      <mat-label><mat-icon>smart_toy</mat-icon> <strong>&nbsp;Modelo</strong></mat-label>
-    </mat-form-field>
-  </div>
-
-  <mat-accordion>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title> Opções avançadas </mat-panel-title>
-      </mat-expansion-panel-header>
-      <p>I'm visible because I am open</p>
-    </mat-expansion-panel>
-  </mat-accordion>
-
-  <button mat-flat-button>Iniciar</button>
+    <div>
+      <mat-form-field class="full-width">
+        <mat-label>Nome da transcrição</mat-label>
+        <input matInput formControlName="outputFile" [disabled]="true" />
+      </mat-form-field>
+    </div>
+  </form>
 </section>

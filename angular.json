@@ -6,7 +6,7 @@
     "analytics": false
   },
   "projects": {
-    "whisper-cpp-wrapper": {
+    "whisper-wrapper": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
@@ -15,7 +15,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist/whisper-cpp-wrapper",
+            "outputPath": "dist/whisper-wrapper",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
@@ -57,10 +57,10 @@
           },
           "configurations": {
             "production": {
-              "buildTarget": "whisper-cpp-wrapper:build:production"
+              "buildTarget": "whisper-wrapper:build:production"
             },
             "development": {
-              "buildTarget": "whisper-cpp-wrapper:build:development"
+              "buildTarget": "whisper-wrapper:build:development"
             }
           },
           "defaultConfiguration": "development"

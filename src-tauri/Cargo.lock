@@ -4644,7 +4644,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "whisper-cpp-wrapper"
+name = "whisper-wrapper"
 version = "0.1.0"
 dependencies = [
  "serde",

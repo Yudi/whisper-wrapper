@@ -1,18 +1,18 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "whisper-cpp-wrapper",
+  "productName": "whisper-wrapper",
   "version": "0.1.0",
   "identifier": "com.renanyudi.whispercppwrapper",
   "build": {
     "beforeDevCommand": "bun run start",
     "devUrl": "http://localhost:1420",
     "beforeBuildCommand": "bun run build",
-    "frontendDist": "../dist/whisper-cpp-wrapper/browser"
+    "frontendDist": "../dist/whisper-wrapper/browser"
   },
   "app": {
     "windows": [
       {
-        "title": "Whisper.cpp Wrapper",
+        "title": "Whisper Wrapper",
         "width": 550,
         "height": 600,
         "minWidth": 550
